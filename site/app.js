@@ -185,7 +185,7 @@ function openDrawer(props, statusInfo, selectedDay) {
     const content = `
         <h2>${props.nom}</h2>
         <div class="status-badge ${statusBadgeClass}">${statusInfo.message}</div>
-        <p><strong>Adresse:</strong> ${props.adresse}</p>
+        <p><strong>Adresse:</strong> <a href="https://cartes.app/?q=${encodeURIComponent(props.adresse)}" target="_blank">${props.adresse}</a></p>
         ${scheduleHtml}
         <p><a href="${props.url}" target="_blank">Voir sur paris.fr</a></p>
         ${bassinsHtml ? `<p><strong>Bassins:</strong></p>${bassinsHtml}` : ''}
