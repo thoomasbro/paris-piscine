@@ -1,0 +1,635 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.284871,
+          48.848888
+        ]
+      },
+      "properties": {
+        "nom": "Piscine René et André Mourlon",
+        "adresse": "19, rue Gaston de Caillavet, Paris 15e",
+        "url": "https://www.paris.fr/lieux/piscine-rene-et-andre-mourlon-2938"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.293328,
+          48.828033
+        ]
+      },
+      "properties": {
+        "nom": "Piscine La Plaine",
+        "adresse": "13, rue du Général Guillaumat, Paris 15e",
+        "url": "https://www.paris.fr/lieux/piscine-la-plaine-2937"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.306259,
+          48.876242
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Jacqueline Auriol",
+        "adresse": "7 Allée Louis de Funès, Paris 8e",
+        "url": "https://www.paris.fr/lieux/piscine-jacqueline-auriol-17349"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.309453,
+          48.824375
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Didot",
+        "adresse": "22, avenue Georges Lafenestre, Paris 14e",
+        "url": "https://www.paris.fr/lieux/piscine-didot-2932"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.272316,
+          48.86775
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Henry de Montherlant",
+        "adresse": "30, boulevard Lannes, Paris 16e",
+        "url": "https://www.paris.fr/lieux/piscine-henry-de-montherlant-2939"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.406192,
+          48.875378
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Georges-Vallerey",
+        "adresse": "148, avenue Gambetta, Paris 20e",
+        "url": "https://www.paris.fr/lieux/piscine-georges-vallerey-2949"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.412932,
+          48.842102
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Roger Le Gall",
+        "adresse": "34, boulevard Carnot, Paris 12e",
+        "url": "https://www.paris.fr/lieux/piscine-roger-le-gall-2950"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.375062,
+          48.890739
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Mathis",
+        "adresse": "15, rue Mathis, Paris 19e",
+        "url": "https://www.paris.fr/lieux/piscine-mathis-2946"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.326571,
+          48.831636
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Aspirant Dunand",
+        "adresse": "20, rue Jacques Perrin, Paris 14e",
+        "url": "https://www.paris.fr/lieux/piscine-aspirant-dunand-2931"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.350684,
+          48.894437
+        ]
+      },
+      "properties": {
+        "nom": "Piscine des Amiraux",
+        "adresse": "6, rue Hermann Lachapelle, Paris 18e",
+        "url": "https://www.paris.fr/lieux/piscine-des-amiraux-2944"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.352482,
+          48.82743
+        ]
+      },
+      "properties": {
+        "nom": "Piscine de la Butte aux Cailles",
+        "adresse": "5, place Paul Verlaine, Paris 13e",
+        "url": "https://www.paris.fr/lieux/piscine-de-la-butte-aux-cailles-2927"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.318817,
+          48.894648
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Bernard Lafay",
+        "adresse": "79, rue de la Jonquière, Paris 17e",
+        "url": "https://www.paris.fr/lieux/piscine-bernard-lafay-2940"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.321962,
+          48.842606
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Armand Massard",
+        "adresse": "66 boulevard du Montparnasse , Paris 15e",
+        "url": "https://www.paris.fr/lieux/piscine-armand-massard-2933"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.390105,
+          48.882568
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Georges Hermant",
+        "adresse": "8-10, rue David d Angers, Paris 19e",
+        "url": "https://www.paris.fr/lieux/piscine-georges-hermant-2948"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.342222,
+          48.882035
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Georges Drigny",
+        "adresse": "18, rue Bochart de Saron, Paris 9e",
+        "url": "https://www.paris.fr/lieux/piscine-georges-drigny-2920"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.363212,
+          48.893969
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Hébert",
+        "adresse": "2, rue des Fillettes, Paris 18e",
+        "url": "https://www.paris.fr/lieux/piscine-hebert-2943"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.377854,
+          48.833701
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Joséphine-Baker",
+        "adresse": "quai François Mauriac - Quai de la Gare, Paris 13e",
+        "url": "https://www.paris.fr/lieux/piscine-josephine-baker-2930"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.342054,
+          48.899487
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Bertrand Dauvin",
+        "adresse": "12, rue René Binet, Paris 18e",
+        "url": "https://www.paris.fr/lieux/piscine-bertrand-dauvin-2942"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.361998,
+          48.830494
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Château des Rentiers",
+        "adresse": "184, rue du Château des Rentiers, Paris 13e",
+        "url": "https://www.paris.fr/lieux/piscine-chateau-des-rentiers-2928"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.325983,
+          48.821666
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Thérèse et Jeanne Brulé",
+        "adresse": "1, place Edith Thomas, Paris 14e",
+        "url": "https://www.paris.fr/lieux/piscine-therese-et-jeanne-brule-19569"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.363789,
+          48.883241
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Château-Landon",
+        "adresse": "31, rue du château-Landon, Paris 10e",
+        "url": "https://www.paris.fr/lieux/piscine-chateau-landon-2923"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.334725,
+          48.896235
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Solita Salgado",
+        "adresse": "133 rue Belliard, Paris 18e",
+        "url": "https://www.paris.fr/lieux/piscine-solita-salgado-20617"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.366279,
+          48.83317
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Dunois",
+        "adresse": "70, rue Dunois, Paris 13e",
+        "url": "https://www.paris.fr/lieux/piscine-dunois-2929"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.352479,
+          48.859406
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Marie-Marvingt",
+        "adresse": "16 rue du renard, Paris 4e",
+        "url": "https://www.paris.fr/lieux/piscine-marie-marvingt-2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.410607,
+          48.860786
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Yvonne Godard",
+        "adresse": "7 rue Serpollet, Paris 20e",
+        "url": "https://www.paris.fr/lieux/piscine-yvonne-godard-19543"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.291008,
+          48.85547
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Emile Anthoine",
+        "adresse": "9, rue Jean Rey, Paris 15e",
+        "url": "https://www.paris.fr/lieux/piscine-emile-anthoine-19201"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.261659,
+          48.858187
+        ]
+      },
+      "properties": {
+        "nom": "Piscine d'Auteuil",
+        "adresse": "1, Route des Lacs à Passy, Paris 16e",
+        "url": "https://www.paris.fr/lieux/piscine-d-auteuil-3324"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.345022,
+          48.877967
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Paul Valeyre",
+        "adresse": "24, rue Marguerite de Rochechouart, Paris 9e",
+        "url": "https://www.paris.fr/lieux/piscine-paul-valeyre-2921"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.295886,
+          48.888555
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Marjorie Gestring (Ex : Piscine Champerret)",
+        "adresse": "36, boulevard de Reims, Paris 17e",
+        "url": "https://www.paris.fr/lieux/piscine-marjorie-gestring-ex-piscine-champerret-2941"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.377682,
+          48.880857
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Edouard Pailleron",
+        "adresse": "32, rue Edouard Pailleron, Paris 19e",
+        "url": "https://www.paris.fr/lieux/piscine-edouard-pailleron-2945"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.369714,
+          48.871547
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Catherine Lagatu",
+        "adresse": "155 avenue Parmentier, Paris 10e",
+        "url": "https://www.paris.fr/lieux/piscine-catherine-lagatu-5041"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.393869,
+          48.856603
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Georges Rigal",
+        "adresse": "115, boulevard de Charonne, Paris 11e",
+        "url": "https://www.paris.fr/lieux/piscine-georges-rigal-2924"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.282485,
+          48.847721
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Keller",
+        "adresse": "14, rue de l'Ingénieur Robert-Keller, Paris 15e",
+        "url": "https://www.paris.fr/lieux/piscine-keller-2936"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.343597,
+          48.862644
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Suzanne Berlioux (Les Halles)",
+        "adresse": "10 place de la rotonde Forum des halles, Paris 1e",
+        "url": "https://www.paris.fr/lieux/piscine-suzanne-berlioux-les-halles-2916"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.351425,
+          48.848969
+        ]
+      },
+      "properties": {
+        "nom": "Espace Sportif Pontoise",
+        "adresse": "19, rue de Pontoise, Paris 5e",
+        "url": "https://www.paris.fr/lieux/espace-sportif-pontoise-2918"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.378677,
+          48.871483
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Alfred Nakache",
+        "adresse": "4-12 rue Dénoyez, Paris 20e",
+        "url": "https://www.paris.fr/lieux/piscine-alfred-nakache-4012"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.347994,
+          48.844744
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Jean Taris",
+        "adresse": "16, rue Thouin, Paris 5e",
+        "url": "https://www.paris.fr/lieux/piscine-jean-taris-3325"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.307504,
+          48.843305
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Blomet",
+        "adresse": "17, rue Blomet, Paris 15e",
+        "url": "https://www.paris.fr/lieux/piscine-blomet-2934"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.37042,
+          48.860545
+        ]
+      },
+      "properties": {
+        "nom": "Piscine de la Cour des Lions",
+        "adresse": "9, rue Alphonse Baudin, Paris 11e",
+        "url": "https://www.paris.fr/lieux/piscine-de-la-cour-des-lions-2925"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.335896,
+          48.851783
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Saint-Germain",
+        "adresse": "12, rue Lobineau, Paris 6e",
+        "url": "https://www.paris.fr/lieux/piscine-saint-germain-2919"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.389398,
+          48.842147
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Jean Boiteux",
+        "adresse": "13, rue Hénard, Paris 12e",
+        "url": "https://www.paris.fr/lieux/piscine-jean-boiteux-2926"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.385136,
+          48.893083
+        ]
+      },
+      "properties": {
+        "nom": "Piscine Rouvet",
+        "adresse": "1, rue Rouvet, Paris 19e",
+        "url": "https://www.paris.fr/lieux/piscine-rouvet-2947"
+      }
+    }
+  ]
+}
