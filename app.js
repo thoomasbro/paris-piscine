@@ -7,10 +7,45 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     maxZoom: 20
 }).addTo(map);
 
+// Global variables
+let geojsonData = null;
+let geojsonLayer = null;
+const days = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+
+// Initialize Day Selector
+function initDaySelector() {
+    const select = document.getElementById('day-select');
+    const todayIndex = new Date().getDay();
+    
+    // Reorder days to start with Monday (or keep standard week order? Let's use standard Lundi-Dimanche for the list, but handle "Today" logic)
+    // Actually, let's list the next 7 days starting from today? Or just the static week days?
+    // The user request says: "la sélection par défaut est 'aujourd'hui [jour]'".
+    // Let's list standard week days, and mark the current one.
+    
+    // Standard French week starts Monday
+    const weekOrder = [1, 2, 3, 4, 5, 6, 0]; // Mon to Sun
+    
+    weekOrder.forEach(dayIndex => {
+        const dayName = days[dayIndex];
+        const option = document.createElement('option');
+        option.value = dayName;
+        
+        if (dayIndex === todayIndex) {
+            option.text = `Aujourd'hui (${dayName})`;
+            option.selected = true;
+        } else {
+            option.text = dayName;
+        }
+        select.appendChild(option);
+    });
+
+    select.addEventListener('change', () => {
+        updateMap();
+    });
+}
+
 // Helper to parse time string "HH h MM" to minutes from midnight
 function parseTime(timeStr) {
-    // Expected format: "07 h 00" or "22 h 30"
-    // Remove non-breaking spaces if any
     timeStr = timeStr.replace(/\u00a0/g, ' ').replace(/&nbsp;/g, ' ');
     const parts = timeStr.split('h');
     if (parts.length !== 2) return null;
@@ -21,7 +56,6 @@ function parseTime(timeStr) {
 
 // Helper to parse a range string "07 h 00 – 08 h 30"
 function parseRange(rangeStr) {
-    // Split by en-dash or hyphen
     const parts = rangeStr.split(/[–-]/);
     if (parts.length !== 2) return null;
     const start = parseTime(parts[0].trim());
@@ -30,36 +64,57 @@ function parseRange(rangeStr) {
     return { start, end };
 }
 
-// Get current status
-function getPoolStatus(horaires) {
+// Get status for a specific day
+function getPoolStatus(horaires, selectedDay) {
     const now = new Date();
-    const days = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
-    const currentDayName = days[now.getDay()];
+    const currentDayIndex = now.getDay();
+    const currentDayName = days[currentDayIndex];
+    const isToday = (selectedDay === currentDayName);
     
     const currentMinutes = now.getHours() * 60 + now.getMinutes();
     
-    if (!horaires || !horaires[currentDayName]) {
-        return { status: 'closed', message: 'Fermé aujourd\'hui' };
+    if (!horaires || !horaires[selectedDay]) {
+        return { status: 'closed', message: 'Fermé ce jour' };
     }
 
-    const daySchedule = horaires[currentDayName];
-    // Example schedule: "07 h 00 – 08 h 30 11 h 30 – 13 h 30"
-    // We need to split multiple ranges. They are usually separated by spaces or newlines in the raw text, 
-    // but in our JSON they might be concatenated.
-    // Based on our scraper, it seems they are just concatenated with spaces.
-    // Regex to find patterns like "DD h DD – DD h DD"
+    const daySchedule = horaires[selectedDay];
     const rangeRegex = /(\d{1,2}\s*h\s*\d{2}\s*[–-]\s*\d{1,2}\s*h\s*\d{2})/g;
     const matches = daySchedule.match(rangeRegex);
     
     if (!matches) {
-        return { status: 'closed', message: 'Horaires non reconnus' };
+        // Sometimes it might say "Fermé" or have no ranges
+        return { status: 'closed', message: 'Fermé' };
     }
 
     const ranges = matches.map(parseRange).filter(r => r !== null);
-    
-    // Sort ranges by start time
     ranges.sort((a, b) => a.start - b.start);
 
+    // If it's NOT today, we just want to know if it's open at all that day.
+    // User request: "bleu pour les pisicines qui vont ouvrir (avec le prochain créneau...)"
+    // For future days, "vont ouvrir" means "open that day".
+    if (!isToday) {
+        if (ranges.length > 0) {
+            // Show the first slot or full schedule?
+            // Let's show the full schedule in message, or just "Ouvert : ..."
+            // For the badge, maybe just the first slot to keep it short.
+            const firstRange = ranges[0];
+            const startH = Math.floor(firstRange.start / 60);
+            const startM = firstRange.start % 60;
+            const endH = Math.floor(firstRange.end / 60);
+            const endM = firstRange.end % 60;
+            const startStr = `${startH}h${startM.toString().padStart(2, '0')}`;
+            const endStr = `${endH}h${endM.toString().padStart(2, '0')}`;
+            
+            return { 
+                status: 'opening-soon', // Blue
+                message: `Ouvert : ${startStr} - ${endStr}` + (ranges.length > 1 ? ' ...' : '')
+            };
+        } else {
+            return { status: 'closed', message: 'Fermé' };
+        }
+    }
+
+    // Logic for TODAY
     for (let i = 0; i < ranges.length; i++) {
         const { start, end } = ranges[i];
         
@@ -71,7 +126,7 @@ function getPoolStatus(horaires) {
             return { status: 'open', message: `Ferme à ${endStr}` };
         }
         
-        // Check if opening soon (e.g. next slot is today and we are before it)
+        // Check if opening soon
         if (currentMinutes < start) {
             const startH = Math.floor(start / 60);
             const startM = start % 60;
@@ -101,43 +156,63 @@ function createCustomIcon(status) {
     });
 }
 
+function updateMap() {
+    if (!geojsonData) return;
+    
+    if (geojsonLayer) {
+        map.removeLayer(geojsonLayer);
+    }
+
+    const selectedDay = document.getElementById('day-select').value;
+
+    geojsonLayer = L.geoJSON(geojsonData, {
+        pointToLayer: function(feature, latlng) {
+            const statusInfo = getPoolStatus(feature.properties.horaires, selectedDay);
+            return L.marker(latlng, { icon: createCustomIcon(statusInfo.status) });
+        },
+        onEachFeature: function(feature, layer) {
+            const props = feature.properties;
+            const statusInfo = getPoolStatus(props.horaires, selectedDay);
+            
+            let statusBadgeClass = 'status-closed';
+            if (statusInfo.status === 'open') statusBadgeClass = 'status-open';
+            else if (statusInfo.status === 'opening-soon') statusBadgeClass = 'status-soon';
+
+            let bassinsHtml = '';
+            if (props.bassins && props.bassins.length > 0) {
+                bassinsHtml = '<ul class="bassins-list">';
+                props.bassins.slice(0, 5).forEach(b => {
+                    bassinsHtml += `<li>${b}</li>`;
+                });
+                if (props.bassins.length > 5) bassinsHtml += '<li>...</li>';
+                bassinsHtml += '</ul>';
+            }
+
+            // Show full schedule for the selected day in popup
+            let scheduleHtml = '';
+            if (props.horaires && props.horaires[selectedDay]) {
+                scheduleHtml = `<p><strong>Horaires (${selectedDay}):</strong><br>${props.horaires[selectedDay]}</p>`;
+            }
+
+            const popupContent = `
+                <h3>${props.nom}</h3>
+                <div class="status-badge ${statusBadgeClass}">${statusInfo.message}</div>
+                <p><strong>Adresse:</strong> ${props.adresse}</p>
+                ${scheduleHtml}
+                <p><a href="${props.url}" target="_blank">Voir sur paris.fr</a></p>
+                ${bassinsHtml ? `<p><strong>Bassins:</strong></p>${bassinsHtml}` : ''}
+            `;
+            layer.bindPopup(popupContent);
+        }
+    }).addTo(map);
+}
+
 // Load GeoJSON
 fetch('piscines_paris.geojson')
     .then(response => response.json())
     .then(data => {
-        L.geoJSON(data, {
-            pointToLayer: function(feature, latlng) {
-                const statusInfo = getPoolStatus(feature.properties.horaires);
-                return L.marker(latlng, { icon: createCustomIcon(statusInfo.status) });
-            },
-            onEachFeature: function(feature, layer) {
-                const props = feature.properties;
-                const statusInfo = getPoolStatus(props.horaires);
-                
-                let statusBadgeClass = 'status-closed';
-                if (statusInfo.status === 'open') statusBadgeClass = 'status-open';
-                else if (statusInfo.status === 'opening-soon') statusBadgeClass = 'status-soon';
-
-                let bassinsHtml = '';
-                if (props.bassins && props.bassins.length > 0) {
-                    bassinsHtml = '<ul class="bassins-list">';
-                    // Limit to first 3 characteristics to avoid huge popups
-                    props.bassins.slice(0, 5).forEach(b => {
-                        bassinsHtml += `<li>${b}</li>`;
-                    });
-                    if (props.bassins.length > 5) bassinsHtml += '<li>...</li>';
-                    bassinsHtml += '</ul>';
-                }
-
-                const popupContent = `
-                    <h3>${props.nom}</h3>
-                    <div class="status-badge ${statusBadgeClass}">${statusInfo.message}</div>
-                    <p><strong>Adresse:</strong> ${props.adresse}</p>
-                    <p><a href="${props.url}" target="_blank">Voir sur paris.fr</a></p>
-                    ${bassinsHtml ? `<p><strong>Bassins:</strong></p>${bassinsHtml}` : ''}
-                `;
-                layer.bindPopup(popupContent);
-            }
-        }).addTo(map);
+        geojsonData = data;
+        initDaySelector();
+        updateMap();
     })
     .catch(error => console.error('Error loading GeoJSON:', error));
