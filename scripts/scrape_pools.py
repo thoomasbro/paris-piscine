@@ -4,6 +4,7 @@ import re
 import json
 import time
 import sys
+import os
 
 # Base URL
 BASE_URL = "https://www.paris.fr"
@@ -238,10 +239,13 @@ def main():
         "features": features
     }
     
-    with open('piscines_paris.geojson', 'w', encoding='utf-8') as f:
+    # Save to site directory
+    output_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'site', 'piscines_paris.geojson')
+    
+    with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(geojson, f, indent=2, ensure_ascii=False)
         
-    print(f"Done. Saved {len(features)} pools to piscines_paris.geojson")
+    print(f"Done. Saved {len(features)} pools to {output_path}")
 
 if __name__ == "__main__":
     main()

@@ -8,9 +8,10 @@ Un repertoire de setup correspond aux scripts/prompts pour créer la base géolo
 
 ## Tester localement
 
-Pour tester l'application localement, vous pouvez lancer un serveur HTTP simple avec Python :
+Pour tester l'application localement, vous pouvez lancer un serveur HTTP simple avec Python depuis le répertoire `site` :
 
 ```bash
+cd site
 python3 -m http.server
 ```
 
