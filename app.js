@@ -156,6 +156,54 @@ function createCustomIcon(status) {
     });
 }
 
+// Drawer Logic
+const drawer = document.getElementById('drawer');
+const drawerContent = document.getElementById('drawer-content');
+const drawerClose = document.getElementById('drawer-close');
+
+drawerClose.addEventListener('click', closeDrawer);
+
+function openDrawer(props, statusInfo, selectedDay) {
+    let bassinsHtml = '';
+    if (props.bassins && props.bassins.length > 0) {
+        bassinsHtml = '<ul class="bassins-list">';
+        props.bassins.forEach(b => {
+            bassinsHtml += `<li>${b}</li>`;
+        });
+        bassinsHtml += '</ul>';
+    }
+
+    let scheduleHtml = '';
+    if (props.horaires && props.horaires[selectedDay]) {
+        scheduleHtml = `<p><strong>Horaires (${selectedDay}):</strong><br>${props.horaires[selectedDay]}</p>`;
+    }
+
+    let statusBadgeClass = 'status-closed';
+    if (statusInfo.status === 'open') statusBadgeClass = 'status-open';
+    else if (statusInfo.status === 'opening-soon') statusBadgeClass = 'status-soon';
+
+    const content = `
+        <h2>${props.nom}</h2>
+        <div class="status-badge ${statusBadgeClass}">${statusInfo.message}</div>
+        <p><strong>Adresse:</strong> ${props.adresse}</p>
+        ${scheduleHtml}
+        <p><a href="${props.url}" target="_blank">Voir sur paris.fr</a></p>
+        ${bassinsHtml ? `<p><strong>Bassins:</strong></p>${bassinsHtml}` : ''}
+    `;
+
+    drawerContent.innerHTML = content;
+    drawer.classList.add('open');
+}
+
+function closeDrawer() {
+    drawer.classList.remove('open');
+}
+
+// Map click to close drawer
+map.on('click', () => {
+    closeDrawer();
+});
+
 function updateMap() {
     if (!geojsonData) return;
     
@@ -172,37 +220,15 @@ function updateMap() {
         },
         onEachFeature: function(feature, layer) {
             const props = feature.properties;
-            const statusInfo = getPoolStatus(props.horaires, selectedDay);
             
-            let statusBadgeClass = 'status-closed';
-            if (statusInfo.status === 'open') statusBadgeClass = 'status-open';
-            else if (statusInfo.status === 'opening-soon') statusBadgeClass = 'status-soon';
-
-            let bassinsHtml = '';
-            if (props.bassins && props.bassins.length > 0) {
-                bassinsHtml = '<ul class="bassins-list">';
-                props.bassins.slice(0, 5).forEach(b => {
-                    bassinsHtml += `<li>${b}</li>`;
-                });
-                if (props.bassins.length > 5) bassinsHtml += '<li>...</li>';
-                bassinsHtml += '</ul>';
-            }
-
-            // Show full schedule for the selected day in popup
-            let scheduleHtml = '';
-            if (props.horaires && props.horaires[selectedDay]) {
-                scheduleHtml = `<p><strong>Horaires (${selectedDay}):</strong><br>${props.horaires[selectedDay]}</p>`;
-            }
-
-            const popupContent = `
-                <h3>${props.nom}</h3>
-                <div class="status-badge ${statusBadgeClass}">${statusInfo.message}</div>
-                <p><strong>Adresse:</strong> ${props.adresse}</p>
-                ${scheduleHtml}
-                <p><a href="${props.url}" target="_blank">Voir sur paris.fr</a></p>
-                ${bassinsHtml ? `<p><strong>Bassins:</strong></p>${bassinsHtml}` : ''}
-            `;
-            layer.bindPopup(popupContent);
+            layer.on('click', (e) => {
+                L.DomEvent.stopPropagation(e); // Prevent map click
+                const statusInfo = getPoolStatus(props.horaires, selectedDay);
+                openDrawer(props, statusInfo, selectedDay);
+                
+                // Center map on marker (optional, but nice on mobile)
+                map.panTo(e.latlng);
+            });
         }
     }).addTo(map);
 }
