@@ -29,4 +29,4 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add site/piscines_paris.geojson
           # Only commit if there are changes
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update pool data [skip ci]" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update pool data" && git push)
