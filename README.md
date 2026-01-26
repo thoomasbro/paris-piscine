@@ -11,6 +11,7 @@ Bienvenue sur **Piscines de Paris**, la carte interactive qui va sauver vos sess
 C'est une carte super simple qui vous dit tout ce qu'il faut savoir :
 - 🟢 **VERT** : C'est ouvert ! Foncez ! (On vous dit même quand ça ferme)
 - 🔵 **BLEU** : Ça va ouvrir aujourd'hui. Préparez votre sac !
+- 🟠 **ORANGE** : Fermeture imminente (moins de 45 min avant la fermeture). A moins que vous soyez devant la porte, c'est cuit pour aujourd'hui !
 - 🔴 **ROUGE** : C'est mort pour aujourd'hui. Retournez vous coucher ou allez courir.
 
 On vous donne aussi les infos pratiques (longueur du bassin, adresse, lien vers l'itinéraire) dans un petit tiroir bien pratique.
