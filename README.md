@@ -1,18 +1,42 @@
-Application de consultation des horaires de piscine de la ville de Paris.
+# 🏊 Piscines de Paris - Plouf !
 
-L'application est divisée en deux parties :
-- Une interface utilisateur pour consulter les horaires publiée sur github pages et basée sur leaflet / openstreetmap.
-- Un flow pour récupérer les horaires qui est lancé chaque jour via une github action pour mettre à jour les horaires.
+Salut les nageurs et nageuses ! 🐬
 
-Un repertoire de setup correspond aux scripts/prompts pour créer la base géolocalisée des piscines de Paris.
+Bienvenue sur **Piscines de Paris**, la carte interactive qui va sauver vos sessions natation. Fini d'arriver devant une porte close avec votre bonnet et vos lunettes !
 
-## Tester localement
+👉 **[Voir la carte en direct](https://thomasbrosset.github.io/paris-piscine/)** (Lien à adapter une fois déployé)
 
-Pour tester l'application localement, vous pouvez lancer un serveur HTTP simple avec Python depuis le répertoire `site` :
+## C'est quoi ce truc ?
 
-```bash
-cd site
-python3 -m http.server
-```
+C'est une carte super simple qui vous dit tout ce qu'il faut savoir :
+- 🟢 **VERT** : C'est ouvert ! Foncez ! (On vous dit même quand ça ferme)
+- 🔵 **BLEU** : Ça va ouvrir aujourd'hui. Préparez votre sac !
+- 🔴 **ROUGE** : C'est mort pour aujourd'hui. Retournez vous coucher ou allez courir.
 
-Ensuite, ouvrez votre navigateur à l'adresse `http://localhost:8000`. 
+On vous donne aussi les infos pratiques (longueur du bassin, adresse, lien vers l'itinéraire) dans un petit tiroir bien pratique.
+
+## Inspiration 💡
+
+Un grand merci à **[@nageuseparisienne](https://www.instagram.com/nageuseparisienne/)** sur Instagram qui nous a inspiré ce projet ! Allez voir son compte, c'est top pour les amoureu•se•s des bassins, de l'architecture et de l'écriture.
+
+## Open Source & Pas de Pub 🚫💰
+
+Ce projet est **100% Open Source** (Licence AGPL) et le restera:
+- Pas de pubs.
+- Pas de tracking chelou.
+- Juste de l'amour et du chlore.
+
+Le code est dispo ici, faites-en ce que vous voulez (ou presque, voir `LICENSE.md`). Si vous voulez bidouiller, jetez un œil à `CONTRIBUTING.md`.
+
+## Ce projet aurait été encore plus facile à mettre en place si... 📢
+
+**Hey, la Ville de Paris !** 👋
+
+Pourquoi les horaires des piscines ne sont pas disponibles en **Open Data** temps réel sur [opendata.paris.fr](https://opendata.paris.fr/) ? 🤔
+
+
+Si besoin, chez [multi.coop](https://multi.coop) on peut vous aider...
+  
+---
+
+*Fait avec ❤️ à Paris.*
