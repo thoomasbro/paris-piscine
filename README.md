@@ -39,4 +39,4 @@ Si besoin, chez [multi.coop](https://multi.coop) on peut vous aider...
   
 ---
 
-*Fait avec ❤️ à Paris.*
+*Fait avec ❤️ à Paris par @thoomasbro.*

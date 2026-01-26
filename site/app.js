@@ -123,7 +123,27 @@ function getPoolStatus(horaires, selectedDay) {
             const endH = Math.floor(end / 60);
             const endM = end % 60;
             const endStr = `${endH}h${endM.toString().padStart(2, '0')}`;
-            return { status: 'open', message: `Ferme à ${endStr}` };
+            
+            // Last entry is 45 mins before closing
+            const lastEntryMinutes = end - 45;
+            const lastEntryH = Math.floor(lastEntryMinutes / 60);
+            const lastEntryM = lastEntryMinutes % 60;
+            const lastEntryStr = `${lastEntryH}h${lastEntryM.toString().padStart(2, '0')}`;
+
+            // Check if closing soon (within 45 mins of closing)
+            if (currentMinutes >= lastEntryMinutes) {
+                 return { 
+                     status: 'closing-soon', // Orange
+                     message: `Ferme à ${endStr}`,
+                     lastEntry: `Dernier accès : ${lastEntryStr}`
+                 };
+            }
+
+            return { 
+                status: 'open', 
+                message: `Ferme à ${endStr}`,
+                lastEntry: `Dernier accès : ${lastEntryStr}`
+            };
         }
         
         // Check if opening soon
@@ -146,6 +166,7 @@ function createCustomIcon(status) {
     let cssClass = 'marker-pin';
     if (status === 'open') cssClass += ' open';
     else if (status === 'opening-soon') cssClass += ' opening-soon';
+    else if (status === 'closing-soon') cssClass += ' closing-soon';
     else cssClass += ' closed';
 
     return L.divIcon({
@@ -181,10 +202,12 @@ function openDrawer(props, statusInfo, selectedDay) {
     let statusBadgeClass = 'status-closed';
     if (statusInfo.status === 'open') statusBadgeClass = 'status-open';
     else if (statusInfo.status === 'opening-soon') statusBadgeClass = 'status-soon';
+    else if (statusInfo.status === 'closing-soon') statusBadgeClass = 'status-closing-soon';
 
     const content = `
         <h2>${props.nom}</h2>
         <div class="status-badge ${statusBadgeClass}">${statusInfo.message}</div>
+        ${statusInfo.lastEntry ? `<p style="color: #d35400; font-weight: bold; font-size: 13px;">⚠️ ${statusInfo.lastEntry}</p>` : ''}
         <p><strong>Adresse:</strong> <a href="https://cartes.app/?q=${encodeURIComponent(props.adresse)}" target="_blank">${props.adresse}</a></p>
         ${scheduleHtml}
         <p><a href="${props.url}" target="_blank">Voir sur paris.fr</a></p>
