@@ -130,6 +130,10 @@ def extract_pool_data(html, url):
             bassin_info.append(clean_match)
 
     data["bassins"] = bassin_info
+
+    # remove duplicates
+    data["bassins"] = list(set(data["bassins"]))
+
     # Horaires
     # The structure is complex with tabs for periods. We want the current period.
     # The current period usually has a class "false" (not hidden?) or we can look for the visible one.
@@ -252,6 +256,9 @@ def main():
             print(f"Warning: No coordinates found for {link}")
 
         time.sleep(0.5)  # Be nice to the server
+
+    # sort pools by name
+    features.sort(key=lambda x: x["properties"]["nom"])
 
     geojson = {"type": "FeatureCollection", "features": features}
 
