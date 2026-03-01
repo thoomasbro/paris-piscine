@@ -15,15 +15,15 @@
         "adresse": "19, rue de Pontoise, Paris 5e",
         "url": "https://www.paris.fr/lieux/espace-sportif-pontoise-2918",
         "bassins": [
-          "Nombre de couloir : 6",
-          "Profondeur : De 1,40 à 2,80m",
-          "Revêtement du bassin : Résine armée",
-          "Traitement de l'eau : Chlore",
-          "Couloirs avec utilisation de matériel : 1",
           "Lumière artificielle : Lumière mixte",
-          "Longueur du bassin : 33m",
+          "Profondeur : De 1,40 à 2,80m",
+          "Couloirs avec utilisation de matériel : 1",
+          "Traitement de l'eau : Chlore",
+          "Largeur du bassin : 15m",
           "Température de l'eau : 27,6°C en moyenne",
-          "Largeur du bassin : 15m"
+          "Longueur du bassin : 33m",
+          "Nombre de couloir : 6",
+          "Revêtement du bassin : Résine armée"
         ],
         "horaires": {
           "Lundi": "06 h 30 – 07 h 45 11 h 45 – 19 h 45 20 h 00 – 22 h 45",
@@ -50,10 +50,10 @@
         "adresse": "4-12 rue Dénoyez, Paris 20e",
         "url": "https://www.paris.fr/lieux/piscine-alfred-nakache-4012",
         "bassins": [
-          "Largeur du bassin : 10 m",
+          "Traitement de l'eau : Acide sulfurique",
           "Profondeur : De 1,30 m à 2 m",
           "Longueur du bassin : 25 m",
-          "Traitement de l'eau : Acide sulfurique"
+          "Largeur du bassin : 10 m"
         ],
         "horaires": {
           "Lundi": "07 h 00 – 18 h 00",
@@ -80,23 +80,23 @@
         "adresse": "66 boulevard du Montparnasse , Paris 15e",
         "url": "https://www.paris.fr/lieux/piscine-armand-massard-2933",
         "bassins": [
-          "Profondeur : De 1,20 m à 1,80 m",
-          "Longueur du bassin : 12,5 m",
-          "Longueur du bassin : 33 m",
-          "Largeur du bassin : 12,5 m",
-          "Traitement de l'eau : Javel et correcteur PH : acide sulfurique",
-          "Longueur du bassin : 25 m",
-          "Profondeur : Minimale 0,70 m",
           "Largeur du bassin : 15 m",
+          "Largeur du bassin : 12,5 m",
+          "Longueur du bassin : 33 m",
+          "Profondeur : De 1,20 m à 1,80 m",
+          "Longueur du bassin : 25 m",
           "Profondeur : De 1,20 m à 3,10 m",
-          "Largeur du bassin : 6 m"
+          "Largeur du bassin : 6 m",
+          "Longueur du bassin : 12,5 m",
+          "Profondeur : Minimale 0,70 m",
+          "Traitement de l'eau : Javel et correcteur PH : acide sulfurique"
         ],
         "horaires": {
           "Lundi": "10 h 00 – 18 h 00",
           "Mardi": "07 h 00 – 18 h 00",
           "Mercredi": "07 h 00 – 20 h 30",
           "Jeudi": "07 h 00 – 18 h 00",
-          "Vendredi": "Horaires habituels :",
+          "Vendredi": "07 h 00 – 18 h 00",
           "Samedi": "07 h 00 – 18 h 00",
           "Dimanche": "08 h 00 – 18 h 00"
         }
@@ -116,12 +116,12 @@
         "adresse": "20, rue Jacques Perrin, Paris 14e",
         "url": "https://www.paris.fr/lieux/piscine-aspirant-dunand-2931",
         "bassins": [
-          "Lumière naturelle : Oui, piscine avec baies vitrées",
-          "Couloirs avec utilisation de matériel : 1 couloirs sauf en cas d’activités en cours.",
-          "Revêtement du bassin : carrelage",
-          "Température de l'eau : 26°",
           "Traitement de l'eau : Acide chlorhydrique et acide sulfurique",
           "Largeur du bassin : 12,5 m",
+          "Couloirs avec utilisation de matériel : 1 couloirs sauf en cas d’activités en cours.",
+          "Lumière naturelle : Oui, piscine avec baies vitrées",
+          "Température de l'eau : 26°",
+          "Revêtement du bassin : carrelage",
           "Longueur du bassin : 25 m",
           "Profondeur : De 0,80 m à 2,30 m"
         ],
@@ -131,7 +131,7 @@
           "Mercredi": "07 h 00 – 18 h 00",
           "Jeudi": "07 h 00 – 18 h 00",
           "Vendredi": "07 h 00 – 22 h 00",
-          "Samedi": "07 h 00 – 18 h 00",
+          "Samedi": "Horaires habituels :",
           "Dimanche": "08 h 00 – 18 h 00"
         }
       }
@@ -150,21 +150,21 @@
         "adresse": "79, rue de la Jonquière, Paris 17e",
         "url": "https://www.paris.fr/lieux/piscine-bernard-lafay-2940",
         "bassins": [
-          "Température de l'eau : 29° en moyenne",
-          "Couloirs avec utilisation de matériel : 0 à 2 couloirs maximum, selon la fréquentation",
-          "Température de l'eau : 27°",
           "Profondeur : De 1,25 m à 1,85 m",
           "Largeur du bassin : 12,5 m",
+          "Traitement de l'eau : Acide sulfurique",
           "Longueur du bassin : 25 m",
-          "Traitement de l'eau : Acide sulfurique"
+          "Température de l'eau : 29° en moyenne",
+          "Température de l'eau : 27°",
+          "Couloirs avec utilisation de matériel : 0 à 2 couloirs maximum, selon la fréquentation"
         ],
         "horaires": {
           "Lundi": "10 h 00 – 18 h 00",
           "Mardi": "07 h 00 – 18 h 00",
           "Mercredi": "07 h 00 – 18 h 00",
           "Jeudi": "07 h 00 – 18 h 00",
-          "Vendredi": "Horaires habituels :",
-          "Samedi": "07 h 00 – 18 h 00",
+          "Vendredi": "07 h 00 – 18 h 00",
+          "Samedi": "Horaires habituels :",
           "Dimanche": "08 h 00 – 18 h 00"
         }
       }
@@ -183,26 +183,26 @@
         "adresse": "12, rue René Binet, Paris 18e",
         "url": "https://www.paris.fr/lieux/piscine-bertrand-dauvin-2942",
         "bassins": [
-          "Longueur du bassin : 12,50m",
-          "Lumière artificielle : Solarium",
-          "Température de l'eau : 27°",
-          "Nombre de couloir : 4",
+          "Couloirs avec utilisation de matériel : Oui",
           "Température de l'eau : 30 à 31° le week-end et le lundi après-midi",
           "Largeur du bassin : 6m",
           "Largeur du bassin : 12,5 m",
           "Nombre de couloir : 5",
+          "Lumière artificielle : Solarium",
+          "Traitement de l'eau : Acide sulfurique",
+          "Nombre de couloir : 4",
+          "Longueur du bassin : 12,50m",
           "Longueur du bassin : 25 m",
-          "Couloirs avec utilisation de matériel : Oui",
-          "Profondeur : De 0,80 m à 3,80 m",
           "Profondeur : 0,80 à 1,40m",
-          "Traitement de l'eau : Acide sulfurique"
+          "Profondeur : De 0,80 m à 3,80 m",
+          "Température de l'eau : 27°"
         ],
         "horaires": {
           "Lundi": "07 h 00 – 18 h 00",
           "Mardi": "07 h 00 – 18 h 00",
           "Mercredi": "10 h 00 – 18 h 00",
           "Jeudi": "07 h 00 – 22 h 00",
-          "Vendredi": "Horaires habituels :",
+          "Vendredi": "07 h 00 – 18 h 00",
           "Samedi": "07 h 00 – 18 h 00",
           "Dimanche": "08 h 00 – 18 h 00"
         }
@@ -222,13 +222,13 @@
         "adresse": "17, rue Blomet, Paris 15e",
         "url": "https://www.paris.fr/lieux/piscine-blomet-2934",
         "bassins": [
-          "Revêtement du bassin : Carrelage",
-          "Largeur du bassin : 12 m",
-          "Traitement de l'eau : Chlore",
           "Température de l'eau : 26°",
+          "Longueur du bassin : 50 m mur amovible",
           "Lumière naturelle : Ouverture des velux en été",
+          "Traitement de l'eau : Chlore",
+          "Largeur du bassin : 12 m",
           "Profondeur : De 0,85 m à 2 m",
-          "Longueur du bassin : 50 m mur amovible"
+          "Revêtement du bassin : Carrelage"
         ],
         "horaires": {
           "Lundi": "07 h 00 – 22 h 30",
@@ -255,12 +255,12 @@
         "adresse": "155 avenue Parmentier, Paris 10e",
         "url": "https://www.paris.fr/lieux/piscine-catherine-lagatu-5041",
         "bassins": [
-          "Profondeur : De 0,90 m à 3,40 m",
-          "Lumière naturelle : Non",
-          "Couloirs avec utilisation de matériel : Planches",
-          "Longueur du bassin : 25 m",
           "Largeur du bassin : 15 m",
-          "Traitement de l'eau : Acide sulfurique"
+          "Traitement de l'eau : Acide sulfurique",
+          "Profondeur : De 0,90 m à 3,40 m",
+          "Longueur du bassin : 25 m",
+          "Lumière naturelle : Non",
+          "Couloirs avec utilisation de matériel : Planches"
         ],
         "horaires": {
           "Lundi": "10 h 00 – 18 h 00",
@@ -287,10 +287,10 @@
         "adresse": "184, rue du Château des Rentiers, Paris 13e",
         "url": "https://www.paris.fr/lieux/piscine-chateau-des-rentiers-2928",
         "bassins": [
-          "Longueur du bassin : 25m",
-          "Largeur du bassin : 12,50m",
+          "Traitement de l'eau : Acide sulfurique",
           "Profondeur : De 0,80 à 3,80m",
-          "Traitement de l'eau : Acide sulfurique"
+          "Largeur du bassin : 12,50m",
+          "Longueur du bassin : 25m"
         ],
         "horaires": {
           "Lundi": "10 h 00 – 18 h 00",
@@ -317,11 +317,11 @@
         "adresse": "31, rue du château-Landon, Paris 10e",
         "url": "https://www.paris.fr/lieux/piscine-chateau-landon-2923",
         "bassins": [
-          "Largeur du bassin : 10m",
-          "Longueur du bassin : 25m",
-          "Température de l'eau : 28° en moyenne",
           "Profondeur : De 1.55m à 2.75m",
-          "Longueur du bassin : 6.30m"
+          "Longueur du bassin : 6.30m",
+          "Température de l'eau : 28° en moyenne",
+          "Largeur du bassin : 10m",
+          "Longueur du bassin : 25m"
         ],
         "horaires": {
           "Lundi": "09 h 00 – 22 h 30",
@@ -348,14 +348,14 @@
         "adresse": "22, avenue Georges Lafenestre, Paris 14e",
         "url": "https://www.paris.fr/lieux/piscine-didot-2932",
         "bassins": [
-          "Température de l'eau : 27°",
           "Largeur du bassin : 12,50 m",
-          "Revêtement du bassin : Carrelage",
           "Traitement de l'eau : Acide chlorhydrique et acide sulfurique",
+          "Couloirs avec utilisation de matériel : Oui",
+          "Profondeur : De 0,80 m à 3 m",
           "Longueur du bassin : 25 m",
           "Lumière artificielle : Oui, piscine en sous-sol",
-          "Profondeur : De 0,80 m à 3 m",
-          "Couloirs avec utilisation de matériel : Oui"
+          "Température de l'eau : 27°",
+          "Revêtement du bassin : Carrelage"
         ],
         "horaires": {
           "Lundi": "07 h 00 – 18 h 00",
@@ -382,10 +382,10 @@
         "adresse": "70, rue Dunois, Paris 13e",
         "url": "https://www.paris.fr/lieux/piscine-dunois-2929",
         "bassins": [
+          "Traitement de l'eau : Acide sulfurique",
           "Longueur du bassin : 25m",
           "Profondeur : De 0,80 à 3,40m",
-          "Largeur du bassin : 12,50m",
-          "Traitement de l'eau : Acide sulfurique"
+          "Largeur du bassin : 12,50m"
         ],
         "horaires": {
           "Lundi": "Horaires habituels :",
@@ -412,13 +412,13 @@
         "adresse": "32, rue Edouard Pailleron, Paris 19e",
         "url": "https://www.paris.fr/lieux/piscine-edouard-pailleron-2945",
         "bassins": [
-          "Profondeur : De 0,90 à 2,50 m",
-          "Revêtement du bassin : Carrelage",
-          "Traitement de l'eau : Chlore",
-          "Longueur du bassin : 33 m",
           "Couloirs avec utilisation de matériel : Oui",
           "Largeur du bassin : 15 m",
-          "Température de l'eau : 27° C en moyenne"
+          "Température de l'eau : 27° C en moyenne",
+          "Profondeur : De 0,90 à 2,50 m",
+          "Longueur du bassin : 33 m",
+          "Traitement de l'eau : Chlore",
+          "Revêtement du bassin : Carrelage"
         ],
         "horaires": {}
       }
@@ -437,15 +437,15 @@
         "adresse": "9, rue Jean Rey, Paris 15e",
         "url": "https://www.paris.fr/lieux/piscine-emile-anthoine-19201",
         "bassins": [
-          "Traitement de l'eau : 28°",
+          "Largeur du bassin : 6m",
+          "Température de l'eau : 26°",
+          "Longueur du bassin : 25m",
           "Longueur du bassin : 12,50m",
           "Traitement de l'eau : Chlore",
-          "Température de l'eau : 26°",
-          "Largeur du bassin : 6m",
           "Profondeur : De 1,20 à 2m",
-          "Longueur du bassin : 25m",
-          "Largeur du bassin : 12,50m",
-          "Profondeur : De 0,40 m à 1,30 m"
+          "Traitement de l'eau : 28°",
+          "Profondeur : De 0,40 m à 1,30 m",
+          "Largeur du bassin : 12,50m"
         ],
         "horaires": {
           "Lundi": "07 h 00 – 18 h 00",
@@ -472,11 +472,11 @@
         "adresse": "18, rue Bochart de Saron, Paris 9e",
         "url": "https://www.paris.fr/lieux/piscine-georges-drigny-2920",
         "bassins": [
-          "Température de l'eau : 27°",
-          "Longueur du bassin : 25 m",
           "Profondeur : De 0,80 m à 3,15 m",
           "Largeur du bassin : 15 m",
-          "Traitement de l'eau : Acide sulfurique"
+          "Traitement de l'eau : Acide sulfurique",
+          "Longueur du bassin : 25 m",
+          "Température de l'eau : 27°"
         ],
         "horaires": {
           "Lundi": "10 h 00 – 18 h 00",
@@ -504,11 +504,11 @@
         "url": "https://www.paris.fr/lieux/piscine-georges-hermant-2948",
         "bassins": [
           "Nombre de couloir : 8",
+          "Bassin découvert : Uniquement en période estivale",
           "Largeur du bassin : 20 mètres",
           "Profondeur : De 1,10 mètre à 2,6 mètres",
-          "Bassin découvert : Uniquement en période estivale",
-          "Température de l'eau : 26,6 degrés",
           "Couloirs avec utilisation de matériel : OUI",
+          "Température de l'eau : 26,6 degrés",
           "Longueur du bassin : 50 mètres"
         ],
         "horaires": {}
@@ -529,13 +529,13 @@
         "url": "https://www.paris.fr/lieux/piscine-georges-rigal-2924",
         "bassins": [
           "Profondeur : De 1,25 à 3,25m",
-          "Longueur du bassin : 12,50m",
-          "Température de l'eau : 29°",
-          "Traitement de l'eau : Chlore",
+          "Profondeur : De 0,75 à 1,50m",
           "Largeur du bassin : 6m",
           "Longueur du bassin : 25m",
-          "Largeur du bassin : 12,50m",
-          "Profondeur : De 0,75 à 1,50m"
+          "Température de l'eau : 29°",
+          "Traitement de l'eau : Chlore",
+          "Longueur du bassin : 12,50m",
+          "Largeur du bassin : 12,50m"
         ],
         "horaires": {
           "Lundi": "07 h 00 – 18 h 00",
@@ -562,10 +562,10 @@
         "adresse": "148, avenue Gambetta, Paris 20e",
         "url": "https://www.paris.fr/lieux/piscine-georges-vallerey-2949",
         "bassins": [
+          "Couloirs avec utilisation de matériel : Oui",
           "Revêtement du bassin : Carrelage",
           "Longueur du bassin : 50m",
-          "Température de l'eau : 26.5°",
-          "Couloirs avec utilisation de matériel : Oui"
+          "Température de l'eau : 26.5°"
         ],
         "horaires": {}
       }
@@ -585,12 +585,12 @@
         "url": "https://www.paris.fr/lieux/piscine-henry-de-montherlant-2939",
         "bassins": [
           "Longueur du bassin : 15 m",
-          "Largeur du bassin : 6 m",
-          "Profondeur : Maximale 0,70 m",
-          "Longueur du bassin : 25 m",
-          "Profondeur : De 1,20 m à 3,70 m",
           "Largeur du bassin : 15 m",
-          "Traitement de l'eau : Acide sulfurique"
+          "Traitement de l'eau : Acide sulfurique",
+          "Profondeur : De 1,20 m à 3,70 m",
+          "Longueur du bassin : 25 m",
+          "Largeur du bassin : 6 m",
+          "Profondeur : Maximale 0,70 m"
         ],
         "horaires": {
           "Lundi": "10 h 00 – 18 h 00",
@@ -618,10 +618,10 @@
         "url": "https://www.paris.fr/lieux/piscine-hebert-2943",
         "bassins": [
           "Largeur du bassin : 11,75 m",
-          "Profondeur : De 1,80 m à 2,30 m",
-          "Longueur du bassin : 25 m",
           "Traitement de l'eau : Acide sulfurique",
-          "Lumière naturelle : Oui"
+          "Longueur du bassin : 25 m",
+          "Lumière naturelle : Oui",
+          "Profondeur : De 1,80 m à 2,30 m"
         ],
         "horaires": {
           "Lundi": "11 h 30 – 18 h 00",
@@ -648,12 +648,12 @@
         "adresse": "7 Allée Louis de Funès, Paris 8e",
         "url": "https://www.paris.fr/lieux/piscine-jacqueline-auriol-17349",
         "bassins": [
-          "Lumière naturelle : Grande baie vitrée axposée plein sud",
           "Largeur du bassin : 12,50 m",
-          "Traitement de l'eau : Ozone, chlore et acide sulfurique",
           "Revêtement du bassin : Inox",
+          "Lumière naturelle : Grande baie vitrée axposée plein sud",
           "Longueur du bassin : 25 m",
-          "Profondeur : De 1,10 m à 2,05 m"
+          "Profondeur : De 1,10 m à 2,05 m",
+          "Traitement de l'eau : Ozone, chlore et acide sulfurique"
         ],
         "horaires": {
           "Lundi": "07 h 00 – 18 h 00",
@@ -681,12 +681,12 @@
         "url": "https://www.paris.fr/lieux/piscine-jean-boiteux-2926",
         "bassins": [
           "Largeur du bassin : 6m",
-          "Longueur du bassin : 15m",
+          "Traitement de l'eau : Acide sulfurique",
           "Longueur du bassin : 25m",
           "Profondeur : De 0,60 à 1,20m",
           "Largeur du bassin : 15m",
           "Profondeur : De 1,20 à 3,40m",
-          "Traitement de l'eau : Acide sulfurique"
+          "Longueur du bassin : 15m"
         ],
         "horaires": {
           "Lundi": "Horaires habituels :",
@@ -714,12 +714,12 @@
         "url": "https://www.paris.fr/lieux/piscine-jean-taris-3325",
         "bassins": [
           "Longueur du bassin : 15 m",
-          "Revêtement du bassin : Carrelage",
-          "Profondeur : De 0,70 m à 1,20 m",
-          "Profondeur : De 1,30 m à 3 m",
-          "Longueur du bassin : 25 m",
           "Largeur du bassin : 15 m",
-          "Largeur du bassin : 6 m"
+          "Profondeur : De 0,70 m à 1,20 m",
+          "Longueur du bassin : 25 m",
+          "Largeur du bassin : 6 m",
+          "Profondeur : De 1,30 m à 3 m",
+          "Revêtement du bassin : Carrelage"
         ],
         "horaires": {
           "Lundi": "10 h 00 – 18 h 00",
@@ -747,14 +747,14 @@
         "url": "https://www.paris.fr/lieux/piscine-josephine-baker-2930",
         "bassins": [
           "Lumière naturelle : Vue imprenable sur la Seine et ses bateaux",
-          "Traitement de l'eau : Désinfection par chlore",
-          "Largeur du bassin : 10m",
-          "Revêtement du bassin : Résine en fond de bassin",
-          "Longueur du bassin : 25m",
+          "Nombre de couloir : 4 (les week-end et vacances). Le reste du temps, le nombre de couloirs réservés aux nageurs dépend des horaires et de la fréquentation.",
           "Couloirs avec utilisation de matériel : Utilisation de palmes possible selon la fréquentation",
-          "Profondeur : De 0,90 à 2m",
+          "Largeur du bassin : 10m",
+          "Longueur du bassin : 25m",
+          "Revêtement du bassin : Résine en fond de bassin",
+          "Traitement de l'eau : Désinfection par chlore",
           "Température de l'eau : 26.0°C en moyenne",
-          "Nombre de couloir : 4 (les week-end et vacances). Le reste du temps, le nombre de couloirs réservés aux nageurs dépend des horaires et de la fréquentation."
+          "Profondeur : De 0,90 à 2m"
         ],
         "horaires": {
           "Lundi": "07 h 00 – 12 h 00 13 h 00 – 22 h 00",
@@ -781,16 +781,16 @@
         "adresse": "14, rue de l'Ingénieur Robert-Keller, Paris 15e",
         "url": "https://www.paris.fr/lieux/piscine-keller-2936",
         "bassins": [
+          "Couloirs avec utilisation de matériel : Ligne 4",
+          "Nombre de couloir : 6 couloirs",
           "Température de l'eau : 26°",
-          "Longueur du bassin : 15m",
+          "Température de l'eau : 28°",
+          "Longueur du bassin : 50m",
+          "Largeur du bassin : 15m",
           "Profondeur : 1m10 max",
           "Largeur du bassin : 12m",
-          "Longueur du bassin : 50m",
-          "Profondeur : 1m40-3m80",
-          "Température de l'eau : 28°",
-          "Nombre de couloir : 6 couloirs",
-          "Couloirs avec utilisation de matériel : Ligne 4",
-          "Largeur du bassin : 15m"
+          "Longueur du bassin : 15m",
+          "Profondeur : 1m40-3m80"
         ],
         "horaires": {}
       }
@@ -809,16 +809,16 @@
         "adresse": "13, rue du Général Guillaumat, Paris 15e",
         "url": "https://www.paris.fr/lieux/piscine-la-plaine-2937",
         "bassins": [
-          "Traitement de l'eau : Acide sulfurique - Chlore",
-          "Température de l'eau : 27°",
-          "Couloirs avec utilisation de matériel : 1 couloir pour le matériel types palmes et plaquettes mais non exclusivement réservé",
-          "Profondeur : De 0,80 à 3,40 m",
           "Lumière naturelle : Oui, piscine avec baies vitrées et plantes vertes, située au 1er étage du centre sportif",
           "Nombre de couloir : 5 couloirs ( 1 pour les leçons ou autre activité quand elles se déroulent)",
+          "Revêtement du bassin : Carrelage et extérieur anti-dérapant",
           "Largeur du bassin : 12,5 m",
-          "Plongeoir : 1 plongeoir par ligne d'eau",
           "Longueur du bassin : 25 m",
-          "Revêtement du bassin : Carrelage et extérieur anti-dérapant"
+          "Traitement de l'eau : Acide sulfurique - Chlore",
+          "Plongeoir : 1 plongeoir par ligne d'eau",
+          "Température de l'eau : 27°",
+          "Profondeur : De 0,80 à 3,40 m",
+          "Couloirs avec utilisation de matériel : 1 couloir pour le matériel types palmes et plaquettes mais non exclusivement réservé"
         ],
         "horaires": {
           "Lundi": "Horaires habituels :",
@@ -845,13 +845,13 @@
         "adresse": "16 rue du renard, Paris 4e",
         "url": "https://www.paris.fr/lieux/piscine-marie-marvingt-2",
         "bassins": [
-          "Température de l'eau : 26,5°",
-          "Profondeur : De 0,60 m à 2 m",
-          "Traitement de l'eau : Chlore",
           "Revêtement du bassin : Inox",
+          "Traitement de l'eau : Chlore",
+          "Température de l'eau : 26,5°",
           "Longueur du bassin : 25 m",
-          "Largeur du bassin : 10 m",
-          "Lumière naturelle : Oui"
+          "Lumière naturelle : Oui",
+          "Profondeur : De 0,60 m à 2 m",
+          "Largeur du bassin : 10 m"
         ],
         "horaires": {
           "Lundi": "07 h 00 – 18 h 00",
@@ -878,21 +878,21 @@
         "adresse": "36, boulevard de Reims, Paris 17e",
         "url": "https://www.paris.fr/lieux/piscine-marjorie-gestring-ex-piscine-champerret-2941",
         "bassins": [
-          "Longueur du bassin : 12,5m",
-          "Plongeoir : Oui",
-          "Revêtement du bassin : Carrelage",
-          "Traitement de l'eau : Chlore",
-          "Température de l'eau : 26°",
-          "Bassin découvert : Non",
-          "Largeur du bassin : 6m",
-          "Couloirs avec utilisation de matériel : Tolérées suivant l'affluence",
-          "Longueur du bassin : 25m",
-          "Température de l'eau : 28°",
-          "Nombre de couloir : 5",
           "Largeur du bassin : 12,5m",
-          "Profondeur : De 0,70 à 1,20m",
+          "Largeur du bassin : 6m",
+          "Température de l'eau : 26°",
+          "Nombre de couloir : 5",
+          "Bassin découvert : Non",
+          "Longueur du bassin : 25m",
+          "Traitement de l'eau : Chlore",
+          "Longueur du bassin : 12,5m",
+          "Température de l'eau : 28°",
+          "Lumière naturelle : Oui",
+          "Couloirs avec utilisation de matériel : Tolérées suivant l'affluence",
           "Profondeur : De 1,20 à 3,40m",
-          "Lumière naturelle : Oui"
+          "Plongeoir : Oui",
+          "Profondeur : De 0,70 à 1,20m",
+          "Revêtement du bassin : Carrelage"
         ],
         "horaires": {
           "Lundi": "07 h 00 – 08 h 30 10 h 00 – 19 h 30",
@@ -919,14 +919,14 @@
         "adresse": "15, rue Mathis, Paris 19e",
         "url": "https://www.paris.fr/lieux/piscine-mathis-2946",
         "bassins": [
-          "Longueur du bassin : 12,5m",
           "Profondeur : De 1,30 à 3,30m",
-          "Température de l'eau : 27°",
-          "Profondeur : De 0,55 à 1,30m",
-          "Largeur du bassin : 6m",
-          "Longueur du bassin : 25m",
           "Largeur du bassin : 12,5m",
-          "Traitement de l'eau : Acide sulfurique"
+          "Largeur du bassin : 6m",
+          "Profondeur : De 0,55 à 1,30m",
+          "Traitement de l'eau : Acide sulfurique",
+          "Longueur du bassin : 25m",
+          "Longueur du bassin : 12,5m",
+          "Température de l'eau : 27°"
         ],
         "horaires": {
           "Lundi": "07 h 00 – 18 h 00",
@@ -953,10 +953,10 @@
         "adresse": "24, rue Marguerite de Rochechouart, Paris 9e",
         "url": "https://www.paris.fr/lieux/piscine-paul-valeyre-2921",
         "bassins": [
-          "Largeur du bassin : 12,5 m",
+          "Traitement de l'eau : Acide sulfurique",
           "Profondeur : De 0,90 m à 3,30 m",
           "Longueur du bassin : 25 m",
-          "Traitement de l'eau : Acide sulfurique"
+          "Largeur du bassin : 12,5 m"
         ],
         "horaires": {
           "Lundi": "07 h 00 – 18 h 00",
@@ -983,13 +983,13 @@
         "adresse": "19, rue Gaston de Caillavet, Paris 15e",
         "url": "https://www.paris.fr/lieux/piscine-rene-et-andre-mourlon-2938",
         "bassins": [
-          "Nombre de couloir : 5 couloirs (1 pour les leçons et un autre pour les nageurs confirmés)",
-          "Profondeur : De 1,20 m à 3,50 m",
-          "Lumière artificielle : Oui",
-          "Largeur du bassin : 12,5 m",
-          "Longueur du bassin : 25 m",
           "Revêtement du bassin : Carrelage et extérieur anti-dérapant",
-          "Traitement de l'eau : Acide sulfurique"
+          "Largeur du bassin : 12,5 m",
+          "Traitement de l'eau : Acide sulfurique",
+          "Nombre de couloir : 5 couloirs (1 pour les leçons et un autre pour les nageurs confirmés)",
+          "Longueur du bassin : 25 m",
+          "Profondeur : De 1,20 m à 3,50 m",
+          "Lumière artificielle : Oui"
         ],
         "horaires": {
           "Lundi": "07 h 00 – 18 h 00",
@@ -1016,24 +1016,24 @@
         "adresse": "34, boulevard Carnot, Paris 12e",
         "url": "https://www.paris.fr/lieux/piscine-roger-le-gall-2950",
         "bassins": [
-          "Nombre de couloir : 6",
-          "Plongeoir : Non",
-          "Température de l'eau : 26° en moyenne",
-          "Profondeur : 0,80 m à 2 m",
-          "Profondeur : De 0,90 m à 3 m",
-          "Largeur du bassin : 15 m",
-          "Longueur du bassin : 50 m",
-          "Revêtement du bassin : Carrelage",
-          "Traitement de l'eau : Chlore",
-          "Température de l'eau : 27,5° en moyenne",
-          "Bassin découvert : Non",
-          "Lumière artificielle : Oui",
-          "Largeur du bassin : 12,5 m",
-          "Nombre de couloir : 5",
-          "Couloirs avec utilisation de matériel : 1 en fonction de l'affluence",
-          "Longueur du bassin : 25 m",
           "Bassin découvert : Bassin découvert de mai à fin septembre",
-          "Lumière naturelle : Oui"
+          "Longueur du bassin : 50 m",
+          "Largeur du bassin : 15 m",
+          "Profondeur : 0,80 m à 2 m",
+          "Couloirs avec utilisation de matériel : 1 en fonction de l'affluence",
+          "Température de l'eau : 26° en moyenne",
+          "Largeur du bassin : 12,5 m",
+          "Traitement de l'eau : Chlore",
+          "Nombre de couloir : 5",
+          "Longueur du bassin : 25 m",
+          "Température de l'eau : 27,5° en moyenne",
+          "Plongeoir : Non",
+          "Lumière naturelle : Oui",
+          "Profondeur : De 0,90 m à 3 m",
+          "Bassin découvert : Non",
+          "Nombre de couloir : 6",
+          "Lumière artificielle : Oui",
+          "Revêtement du bassin : Carrelage"
         ],
         "horaires": {
           "Lundi": "Horaires habituels :",
@@ -1066,7 +1066,7 @@
           "Lundi": "10 h 00 – 16 h 30",
           "Mardi": "07 h 00 – 17 h 00",
           "Mercredi": "07 h 00 – 18 h 00",
-          "Jeudi": "Horaires habituels :",
+          "Jeudi": "07 h 00 – 16 h 30",
           "Vendredi": "07 h 00 – 20 h 00",
           "Samedi": "07 h 00 – 18 h 00",
           "Dimanche": "08 h 00 – 18 h 00"
@@ -1087,15 +1087,15 @@
         "adresse": "12, rue Lobineau, Paris 6e",
         "url": "https://www.paris.fr/lieux/piscine-saint-germain-2919",
         "bassins": [
-          "Traitement de l'eau : Chlore liquide",
-          "Profondeur : De 0,80 m à 3,60 m",
-          "Température de l'eau : 26,5°",
-          "Revêtement du bassin : Carrelage",
           "Traitement de l'eau : Acide chlorhydrique et acide sulfurique",
+          "Couloirs avec utilisation de matériel : 5",
           "Largeur du bassin : 12,5 m",
+          "Traitement de l'eau : Chlore liquide",
+          "Température de l'eau : 26,5°",
           "Longueur du bassin : 25 m",
           "Lumière artificielle : Oui, piscine en sous-sol",
-          "Couloirs avec utilisation de matériel : 5"
+          "Profondeur : De 0,80 m à 3,60 m",
+          "Revêtement du bassin : Carrelage"
         ],
         "horaires": {
           "Lundi": "10 h 00 – 18 h 00",
@@ -1122,12 +1122,12 @@
         "adresse": "133 rue Belliard, Paris 18e",
         "url": "https://www.paris.fr/lieux/piscine-solita-salgado-20617",
         "bassins": [
-          "Profondeur : 1m20",
           "Longueur du bassin : 15 m",
-          "Profondeur : 2 m",
+          "Largeur du bassin : 15 m",
+          "Profondeur : 1m20",
           "Longueur du bassin : 25 m",
           "Largeur du bassin : 10 m",
-          "Largeur du bassin : 15 m"
+          "Profondeur : 2 m"
         ],
         "horaires": {
           "Lundi": "07 h 00 – 18 h 00",
@@ -1183,10 +1183,10 @@
         "adresse": "1, place Edith Thomas, Paris 14e",
         "url": "https://www.paris.fr/lieux/piscine-therese-et-jeanne-brule-19569",
         "bassins": [
-          "Largeur du bassin : 20m",
-          "Longueur du bassin : 25m",
-          "Nombre de couloir : 8 couloirs de nage",
           "Profondeur : De 1,40 à 2m",
+          "Longueur du bassin : 25m",
+          "Largeur du bassin : 20m",
+          "Nombre de couloir : 8 couloirs de nage",
           "Lumière artificielle : Lumière naturelle complétée par éclairage régulé"
         ],
         "horaires": {
@@ -1214,13 +1214,13 @@
         "adresse": "7 rue Serpollet, Paris 20e",
         "url": "https://www.paris.fr/lieux/piscine-yvonne-godard-19543",
         "bassins": [
-          "Nombre de couloir : 6",
-          "Profondeur : De 0 à 2m",
           "Nombre de couloir : 3",
           "Largeur du bassin : 10m",
           "Longueur du bassin : 25m",
-          "Profondeur : 0,80 à 1,30m",
-          "Largeur du bassin : 15m"
+          "Profondeur : De 0 à 2m",
+          "Largeur du bassin : 15m",
+          "Nombre de couloir : 6",
+          "Profondeur : 0,80 à 1,30m"
         ],
         "horaires": {
           "Lundi": "11 h 30 – 22 h 00",
@@ -1248,12 +1248,12 @@
         "url": "https://www.paris.fr/lieux/piscine-d-auteuil-3324",
         "bassins": [
           "Profondeur : 1m10",
-          "Profondeur : Minimale 1.20m / Maximale 4.50m",
-          "Largeur du bassin : 6.50m",
-          "Longueur du bassin : 15m",
+          "Traitement de l'eau : Acide sulfurique",
           "Longueur du bassin : 25m",
           "Largeur du bassin : 15m",
-          "Traitement de l'eau : Acide sulfurique"
+          "Largeur du bassin : 6.50m",
+          "Longueur du bassin : 15m",
+          "Profondeur : Minimale 1.20m / Maximale 4.50m"
         ],
         "horaires": {
           "Lundi": "07 h 00 – 18 h 00",
@@ -1261,7 +1261,7 @@
           "Mercredi": "10 h 00 – 20 h 00",
           "Jeudi": "07 h 00 – 18 h 00",
           "Vendredi": "07 h 00 – 18 h 00",
-          "Samedi": "07 h 00 – 18 h 00",
+          "Samedi": "Horaires habituels :",
           "Dimanche": "Horaires habituels :"
         }
       }
@@ -1280,17 +1280,17 @@
         "adresse": "5, place Paul Verlaine, Paris 13e",
         "url": "https://www.paris.fr/lieux/piscine-de-la-butte-aux-cailles-2927",
         "bassins": [
-          "Profondeur : De 0,80 à 2,70m",
-          "Température de l'eau : 26,5°",
           "Largeur du bassin : 6m",
-          "Largeur du bassin : 12m",
-          "Longueur du bassin : 25m",
           "Profondeur : 2m",
-          "Largeur du bassin : 12,50m",
-          "Longueur du bassin : 33m",
+          "Longueur du bassin : 25m",
+          "Température de l'eau : 26,5°",
           "Longueur du bassin : 12m",
+          "Longueur du bassin : 33m",
           "Profondeur : De 0,40 m à 1,30 m",
-          "Traitement de l'eau : Acide sulfurique et javel"
+          "Largeur du bassin : 12,50m",
+          "Traitement de l'eau : Acide sulfurique et javel",
+          "Profondeur : De 0,80 à 2,70m",
+          "Largeur du bassin : 12m"
         ],
         "horaires": {
           "Lundi": "10 h 00 – 18 h 00",
@@ -1298,7 +1298,7 @@
           "Mercredi": "07 h 00 – 18 h 00",
           "Jeudi": "07 h 00 – 18 h 00",
           "Vendredi": "07 h 00 – 18 h 00",
-          "Samedi": "10 h 30 – 20 h 30",
+          "Samedi": "Horaires habituels :",
           "Dimanche": "08 h 00 – 18 h 00"
         }
       }
@@ -1317,15 +1317,15 @@
         "adresse": "9, rue Alphonse Baudin, Paris 11e",
         "url": "https://www.paris.fr/lieux/piscine-de-la-cour-des-lions-2925",
         "bassins": [
-          "Revêtement du bassin : Carrelage",
-          "Lumière naturelle : Oui, piscine avec fenêtres donnant sur l'extérieur",
-          "Température de l'eau : 26°",
-          "Traitement de l'eau : Chlore",
-          "Lumière naturelle : Oui, piscines avec fenêtres donnant sur l'extérieur",
-          "Longueur du bassin : 25 m",
+          "Profondeur : De 1 m à 4,30 m",
           "Largeur du bassin : 15 m",
+          "Température de l'eau : 26°",
+          "Lumière naturelle : Oui, piscines avec fenêtres donnant sur l'extérieur",
+          "Traitement de l'eau : Chlore",
+          "Longueur du bassin : 25 m",
           "Traitement de l'eau : Chlore liquide et acide sulfurique",
-          "Profondeur : De 1 m à 4,30 m"
+          "Lumière naturelle : Oui, piscine avec fenêtres donnant sur l'extérieur",
+          "Revêtement du bassin : Carrelage"
         ],
         "horaires": {
           "Lundi": "07 h 00 – 18 h 00",
@@ -1352,18 +1352,18 @@
         "adresse": "6, rue Hermann Lachapelle, Paris 18e",
         "url": "https://www.paris.fr/lieux/piscine-des-amiraux-2944",
         "bassins": [
-          "Largeur du bassin : 10 m",
+          "Traitement de l'eau : Acide sulfurique",
           "Longueur du bassin : 33 m",
           "Profondeur : De 1 m à 2,50 m",
-          "Traitement de l'eau : Acide sulfurique"
+          "Largeur du bassin : 10 m"
         ],
         "horaires": {
           "Lundi": "Horaires habituels :",
           "Mardi": "Horaires habituels :",
           "Mercredi": "Horaires habituels :",
           "Jeudi": "Horaires habituels :",
-          "Vendredi": "Horaires habituels :",
-          "Samedi": "Horaires habituels :",
+          "Vendredi": "10 h 00 – 18 h 00",
+          "Samedi": "07 h 00 – 18 h 00",
           "Dimanche": "Horaires habituels :"
         }
       }
