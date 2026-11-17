@@ -93,19 +93,28 @@ def extract_horaires_llm(html):
         print("Avertissement : aucun horaire trouvé dans la page.", file=sys.stderr)
         return {}
 
+    creneau = {
+        "type": "object",
+        "properties": {
+            "debut": {"type": "string", "description": "HH:MM"},
+            "fin": {"type": "string", "description": "HH:MM"},
+        },
+        "required": ["debut", "fin"],
+    }
     schema = {
         "type": "object",
         "properties": {
-            day: {"type": "string"} for day in DAYS
+            day: {"type": "array", "items": creneau} for day in DAYS
         },
         "required": DAYS,
     }
     prompt = (
         "Extrais les horaires d'ouverture réguliers de la période en cours "
         "pour chaque jour de la semaine à partir du texte ci-dessous. "
-        "Pour chaque jour, donne les créneaux au format "
-        "'06 h 30 – 07 h 45 11 h 45 – 19 h 45' (séparés par un espace), "
-        "ou 'Fermé' si la piscine est fermée. N'invente rien.\n\n" + excerpt
+        "Un jour peut avoir plusieurs créneaux (2, 3 ou plus) : liste-les "
+        "TOUS, un objet par créneau, au format HH:MM. "
+        "Utilise une liste vide si la piscine est fermée. "
+        "N'invente rien.\n\n" + excerpt
     )
     body = json.dumps(
         {
@@ -127,11 +136,24 @@ def extract_horaires_llm(html):
         print(f"Erreur d'extraction LLM ({LLM_MODEL}) : {e}", file=sys.stderr)
         return {}
 
-    return {
-        day: re.sub(r"\s+", " ", str(result[day])).strip()
-        for day in DAYS
-        if result.get(day)
-    }
+    horaires = {}
+    for day in DAYS:
+        slots = [
+            f"{format_heure(c.get('debut'))} – {format_heure(c.get('fin'))}"
+            for c in result.get(day) or []
+            if isinstance(c, dict) and c.get("debut") and c.get("fin")
+        ]
+        if slots:
+            horaires[day] = " ".join(slots)
+    return horaires
+
+
+def format_heure(value):
+    # "06:30" -> "06 h 30"
+    m = re.search(r"(\d{1,2})\s*[:hH]\s*(\d{2})?", str(value))
+    if not m:
+        return str(value).strip()
+    return f"{int(m.group(1)):02d} h {m.group(2) or '00'}"
 
 
 def extract_pool_data(html, url):
