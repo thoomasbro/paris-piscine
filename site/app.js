@@ -1,10 +1,10 @@
 // Initialize map centered on Paris
 const map = L.map('map').setView([48.8566, 2.3522], 12);
 
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    subdomains: 'abcd',
-    maxZoom: 20
+// Plan IGN (Géoplateforme / cartes.gouv.fr), sans clé API
+L.tileLayer('https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2&STYLE=normal&FORMAT=image/png&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}', {
+    attribution: '&copy; <a href="https://cartes.gouv.fr">cartes.gouv.fr</a> – IGN',
+    maxZoom: 19
 }).addTo(map);
 
 // Global variables
