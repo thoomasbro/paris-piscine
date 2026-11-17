@@ -5,6 +5,12 @@ import json
 import time
 import sys
 import os
+from html import unescape
+
+# LLM léger servi par Ollama (ex. : `ollama pull gemma3:1b`)
+OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434/api/chat")
+LLM_MODEL = os.environ.get("LLM_MODEL", "gemma3:1b")
+DAYS = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
 
 # Base URL
 BASE_URL = "https://www.paris.fr"
@@ -63,6 +69,69 @@ def clean_text(text):
     # Normalize whitespace
     text = re.sub(r"\s+", " ", text).strip()
     return text
+
+
+def html_to_text(html):
+    html = re.sub(r"<(script|style|noscript)[^>]*>.*?</\1>", " ", html, flags=re.S)
+    html = re.sub(r"<[^>]+>", "\n", html)
+    html = unescape(html).replace("\xa0", " ")
+    lines = [re.sub(r"\s+", " ", line).strip() for line in html.split("\n")]
+    return "\n".join(line for line in lines if line)
+
+
+def schedule_excerpt(text):
+    # Extrait la zone des horaires pour limiter le contexte envoyé au modèle
+    start = text.find("Lundi")
+    if start == -1:
+        return ""
+    return text[max(0, start - 300) : start + 2500]
+
+
+def extract_horaires_llm(html):
+    excerpt = schedule_excerpt(html_to_text(html))
+    if not excerpt:
+        print("Avertissement : aucun horaire trouvé dans la page.", file=sys.stderr)
+        return {}
+
+    schema = {
+        "type": "object",
+        "properties": {
+            day: {"type": "string"} for day in DAYS
+        },
+        "required": DAYS,
+    }
+    prompt = (
+        "Extrais les horaires d'ouverture réguliers de la période en cours "
+        "pour chaque jour de la semaine à partir du texte ci-dessous. "
+        "Pour chaque jour, donne les créneaux au format "
+        "'06 h 30 – 07 h 45 11 h 45 – 19 h 45' (séparés par un espace), "
+        "ou 'Fermé' si la piscine est fermée. N'invente rien.\n\n" + excerpt
+    )
+    body = json.dumps(
+        {
+            "model": LLM_MODEL,
+            "messages": [{"role": "user", "content": prompt}],
+            "format": schema,
+            "stream": False,
+            "options": {"temperature": 0},
+        }
+    ).encode()
+    req = urllib.request.Request(
+        OLLAMA_URL, data=body, headers={"Content-Type": "application/json"}
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=120) as response:
+            content = json.load(response)["message"]["content"]
+        result = json.loads(content)
+    except Exception as e:
+        print(f"Erreur d'extraction LLM ({LLM_MODEL}) : {e}", file=sys.stderr)
+        return {}
+
+    return {
+        day: re.sub(r"\s+", " ", str(result[day])).strip()
+        for day in DAYS
+        if result.get(day)
+    }
 
 
 def extract_pool_data(html, url):
@@ -134,93 +203,18 @@ def extract_pool_data(html, url):
     # remove duplicates
     data["bassins"] = list(set(data["bassins"]))
 
-    # Horaires
-    # The structure is complex with tabs for periods. We want the current period.
-    # The current period usually has a class "false" (not hidden?) or we can look for the visible one.
-    # In the file view, we saw: <div class="places--schedules-regular-content-row ...">
-    # containing weekday and timerange.
-
-    horaires = {}
-    # We can iterate over rows.
-    # Regex to find rows: <div class="places--schedules-regular-content-row ..."> ... </div>
-    # This is hard with regex due to nesting.
-
-    # Simpler approach: Find "Lundi", "Mardi"... and the following time range.
-    days = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
-
-    # We need to be careful not to mix periods.
-    # The active tab content seems to be in <div class="places--schedules-regular-content" ...>
-    # Let's try to extract the whole block first if possible, but regex is limited.
-
-    # Let's try to find the day and then capture the next time range list.
-    for day in days:
-        # Search for the day name followed by some tags and then the time range
-        # <div class="places--schedules-regular-content-weekday">\n                    Lundi\n                  </div>
-        # ...
-        # <div class="places--schedules-regular-content-timerange">...</div>
-
-        # This regex might be too greedy or fail due to newlines.
-        # Let's try a simpler one: look for the day, then look for the next timerange block.
-
-        # Find start of day block
-        day_idx = html.find(f">{day}</div>")  # Approximate check for day div content
-        if day_idx == -1:
-            # Try with extra whitespace
-            match_day = re.search(
-                r'<div class="places--schedules-regular-content-weekday">\s*'
-                + day
-                + r"\s*</div>",
-                html,
-            )
-            if match_day:
-                day_idx = match_day.end()
-            else:
-                continue
-
-        # From day_idx, look for the next timerange div
-        timerange_start = html.find(
-            "places--schedules-regular-content-timerange", day_idx
-        )
-        if timerange_start != -1:
-            # Extract content of this div. It might be tricky to find the closing div without a parser.
-            # But we can look for the next "places--schedules-regular-content-row" or end of file.
-            next_row = html.find(
-                "places--schedules-regular-content-row", timerange_start
-            )
-            if next_row == -1:
-                next_row = len(html)
-
-            timerange_html = html[timerange_start:next_row]
-
-            # Extract times from this chunk
-            # 06&nbsp;h&nbsp;30 – 08&nbsp;h&nbsp;30
-            # We can just clean text and look for patterns like "XX h XX - XX h XX"
-
-            clean_times = clean_text(timerange_html)
-            # The clean text might look like "06 h 30 – 08 h 30 10 h 30 – 23 h 30"
-            # Let's try to keep it readable.
-
-            # Actually, the times are often in <div class="places--schedules-regular-content-exceptional-sub ...">
-            # Let's extract text from that specific class if it exists in the chunk
-            sub_match = re.search(
-                r"places--schedules-regular-content-exceptional-sub[^>]*>(.*?)</div>",
-                timerange_html,
-                re.DOTALL,
-            )
-            if sub_match:
-                times = clean_text(sub_match.group(1))
-                horaires[day] = times
-            else:
-                # Fallback to cleaning the whole timerange chunk
-                # Remove "Fermé" if it's there?
-                horaires[day] = clean_times
-
-    data["horaires"] = horaires
+    # Horaires : extraction par LLM léger à partir du texte de la page
+    data["horaires"] = extract_horaires_llm(html)
 
     return data
 
 
 def main():
+    try:
+        urllib.request.urlopen(OLLAMA_URL.rsplit("/api/", 1)[0] + "/api/version", timeout=5)
+    except Exception as e:
+        sys.exit(f"Ollama injoignable ({OLLAMA_URL}) : {e}")
+
     print("Fetching main page...")
     main_html = fetch_url(MAIN_PAGE)
     if not main_html:
@@ -258,6 +252,8 @@ def main():
         time.sleep(0.5)  # Be nice to the server
 
     # sort pools by name
+    if not any(f["properties"]["horaires"] for f in features):
+        sys.exit("Aucun horaire extrait : le fichier GeoJSON n'est pas écrasé.")
     features.sort(key=lambda x: x["properties"]["nom"])
 
     geojson = {"type": "FeatureCollection", "features": features}
